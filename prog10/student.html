@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Database</title>
 </head>
 <body>
-    <form action="p10.php" method="POST">
-        <label>NAME:</label>
-        <input type="text" name="name"><br><br>
-        <label>USN:</label>
+    <h1>KSIT Student Database</h1>
+    <form method="post" action="student.php">
+        <h2>Enter Student Details:</h2>
+        <label>USN: </label>
         <input type="text" name="usn"><br><br>
-        <label>CGPA:</label>
+        <label>Name: </label>
+        <input type="text" name="name"><br><br>
+        <label>CGPA: </label>
         <input type="text" name="cgpa"><br><br>
         <input type="submit" value="Insert">
     </form>
 </body>
 </html>
+
