@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Position</title>
+</head>
+<script>
+    function vow(text){
+        var pos;
+        pos=text.search(/[aeiouAEIOU]/);
+        if(pos<0){
+            alert('Vowel not Found');
+        }
+        else{
+            alert("Vowel Found at position "+(pos+1));
+        }
+    }
+</script>
+<body>
+    <form>
+        <label>Enter Text:</label>
+        <input type="text" name="vowel">
+        <input type="button" value="Submit" onclick="vow(vowel.value)">
+    </form>
+</body>
+</html>

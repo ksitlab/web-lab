@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of a Number</title>
+</head>
+<script>
+    function rev(){
+        var n=prompt("Enter Number");
+        n=parseInt(n);
+        var temp=0,rev=0;
+        while(n>0){
+            temp=n%10;
+            rev=rev*10+temp;
+            n=n/10;
+            n=parseInt(n);
+        }
+        document.write('Reverse of number: '+rev)
+    }
+</script>
+<body>
+    <h1>Reverse of a Number</h1>
+    <input type="button" value="Enter Number" onclick="rev()">
+</body>
+</html>

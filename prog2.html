@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Cube Table</title>
+</head>
+<style>
+    table, td {
+        border: 5px solid black;
+        padding: 2px;
+        font-size: larger;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 400;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    table th{
+        font-size: x-large;
+        border: 3px solid black;
+        padding: 5px;
+    }
+    
+</style>
+<body>
+    <h1 style="text-align: center;">Square & Cubes Table</h1>
+</body>
+<script>
+    document.write("<table border=3px width:100% height:100% align=center>");
+    document.write("<tr><th>Number</th><th>Square</th><th>Cube</th></tr>");
+    for(var i=0;i<11;i++){
+        document.write("<tr><td>"+i+"</td><td>"+i*i+"</td><td>"+i*i*i+"</td><tr>")
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Growing and Shrinking</title>
+</head>
+<body>
+    <h1>Growing Text & Shrinking Text</h1>
+    <p id="p1">Growing Text</p>
+    <p id="p2">Shrinking Text</p>
+</body>
+<script>
+    var size=10;
+    var i=0;
+    var myWait1=setInterval(growtext,100);
+    function growtext(){
+        if(size<100){
+            size=size+1;
+            document.getElementById("p1").style.color="Red";
+            document.getElementById("p1").style.fontSize=size+'pt';
+            document.getElementById("p2").style.visibility="hidden";
+        }
+        else{
+            clearInterval(myWait1);
+            myWait1=setInterval(shrinktext,100);
+            document.getElementById("p1").style.visibility="hidden";
+            document.getElementById("p1").style.fontSize='1px';
+            document.getElementById("p2").style.visibility="visible";
+        }
+    }
+    function shrinktext(){
+        if(size>5){
+            size=size-1;
+            document.getElementById("p2").style.color="Blue";
+            document.getElementById("p2").style.fontSize=size+'pt';
+        }
+        else{
+            clearInterval(myWait1);
+        }
+    }
+</script>
+</html>
